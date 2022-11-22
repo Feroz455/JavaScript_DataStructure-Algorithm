@@ -10,3 +10,12 @@ function pivot(array, start = 0, end = array.length - 1) {
   [array[x], array[start]] = [array[start], array[x]];
   return x;
 }
+
+function Sort(array, start = 0, end = array.length - 1) {
+  if (start >= end) return;
+  let mid = pivot(array, start, end);
+  Sort(array, start, mid - 1);
+  Sort(array, mid + 1, end);
+  return array;
+}
+console.log(Sort([100, 4, 8, 2, 1, 5, 7, 6, 3]));
