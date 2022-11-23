@@ -154,7 +154,6 @@ class singleLinkList {
   }
   reverse2() {
     let next = this.head;
-    
   }
 }
 let list = new singleLinkList();
