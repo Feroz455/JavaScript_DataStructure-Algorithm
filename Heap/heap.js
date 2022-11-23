@@ -45,9 +45,9 @@ class heap {
     let varify = true;
     while (varify) {
       varify = false;
-      let left = this.leftChild(x);
-      let right = this.RightChild(x);
-      let max = this.data[left] > this.data[right] ? left : right;
+      let left = this.leftChild(x),
+        right = this.RightChild(x),
+        max = this.data[left] > this.data[right] ? left : right;
       if (this.data[max] > this.data[x]) {
         [this.data[max], this.data[x]] = [this.data[x], this.data[max]];
         varify = true;
